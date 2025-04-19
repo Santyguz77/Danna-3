@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danna ❤️</title>
+    <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+
+ 
+<div class="main">
+    <div class="up">
+      <button class="card1">❤️Primer año</button>
+      <button class="card2">❤️Segundo año</button>
+    </div>
+    <div class="down">
+      <button class="card3">❤️Cuarto año</button>
+      <button class="card4">❤️Tercer año</button>
+    </div>
+</div>
+
+<div class="card" id="primeraño">
+  <img src="imagenes/primeraño1.gif" alt="Primeraño" style="width: 100%; height: auto; border-radius: 10px;">
+  <div class="card__content">
+    <p class="card__title">Nuestro primer año.❤️😻</p>
+    <p class="card__description">Todo empezo aqui, vivimos muchos momentos lindos, conocimos cosas de ambos y fuimos felices. Claro que tuvimos problemas pero fue un lindo año juntos.</p>
+  </div>
+</div>
+
+<div class="card" id="segundoaño">
+  <img src="imagenes/segundoaño.gif" alt="Primeraño" style="width: 100%; height: auto; border-radius: 10px;">
+  <div class="card__content">
+    <p class="card__title">Nuestro primer año.</p>
+    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="card" id="terceraño">
+  <img src="imagenes/terceraño.gif" alt="Primeraño" style="width: 100%; height: auto; border-radius: 10px;">
+  <div class="card__content">
+  <p class="card__title">Card Title</p>
+  <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="card" id="cuartoaño">
+  
+  <img src="imagenes/cuartoaño.gif" alt="Primeraño" style="width: 100%; height: auto; border-radius: 10px;">
+  <div class="card__content">
+    <p class="card__title">Card Title</p>
+    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="card" id="todoaño">
+    <img src="imagenes/todoaño.jpg" alt="Primeraño" style="width: 100%; height: auto; border-radius: 10px;">
+    <div class="card__content">
+    <p class="card__title">Todo el año</p>
+    <p class="card__description">Resumen de todos los años juntos, con momentos inolvidables y aprendizajes compartidos.</p>
+  </div>
+</div>
+
+<h1 class="title">Te amo mucho❤️</h1>
+
+
+<script>
+let card1Clicked = false;
+let card2Clicked = false;
+let card3Clicked = false;
+let card4Clicked = false;
+
+document.querySelector('.card1').addEventListener('click', () => {
+  const card = document.getElementById('primeraño');
+  card.style.display = card.style.display === 'none' || !card.style.display ? 'block' : 'none';
+  card1Clicked = true;
+  checkAllCardsClicked();
+});
+
+document.querySelector('.card2').addEventListener('click', () => {
+  const card = document.getElementById('segundoaño');
+  card.style.display = card.style.display === 'none' || !card.style.display ? 'block' : 'none';
+  card2Clicked = true;
+  checkAllCardsClicked();
+});
+
+document.querySelector('.card4').addEventListener('click', () => {
+  const card = document.getElementById('terceraño');
+  card.style.display = card.style.display === 'none' || !card.style.display ? 'block' : 'none';
+  card4Clicked = true;
+  checkAllCardsClicked();
+});
+
+document.querySelector('.card3').addEventListener('click', () => {
+  const card = document.getElementById('cuartoaño');
+  card.style.display = card.style.display === 'none' || !card.style.display ? 'block' : 'none';
+  card3Clicked = true;
+  checkAllCardsClicked();
+});
+
+function checkAllCardsClicked() {
+  if (card1Clicked && card2Clicked && card3Clicked && card4Clicked) {
+    const card = document.getElementById('todoaño');
+    card.style.display = 'block';
+  }
+}
+
+</script>
+ 
+</body>
+</html>
