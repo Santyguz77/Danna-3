@@ -70,6 +70,8 @@ let card2Clicked = false;
 let card3Clicked = false;
 let card4Clicked = false;
 
+let redirectTimeout;
+
 document.querySelector('.card1').addEventListener('click', () => {
   const card = document.getElementById('primeraño');
   card.style.display = card.style.display === 'none' || !card.style.display ? 'block' : 'none';
@@ -102,6 +104,14 @@ function checkAllCardsClicked() {
   if (card1Clicked && card2Clicked && card3Clicked && card4Clicked) {
     const card = document.getElementById('todoaño');
     card.style.display = 'block';
+
+    if (redirectTimeout) {
+      clearTimeout(redirectTimeout);
+    }
+
+    redirectTimeout = setTimeout(() => {
+      window.location.href = 'final.html';
+    }, 20000);
   }
 }
 
